@@ -9,10 +9,12 @@ var addTwoNumbers = function(l1, l2) {
 };
 
 // defining singly linked list
-function ListNode(val, next) {
-  this.val = (val===undefined ? 0 : val)
-  this.nex
-  t = (next===undefined ? null : next)
+class ListNode {
+  constructor(val, next) {
+    this.val = (val === undefined ? 0 : val);
+    this.nex;
+    t = (next === undefined ? null : next);
+  }
 }
 
 // testing code on a testCase-1
