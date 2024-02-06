@@ -3,11 +3,13 @@ var findMedianSortedArrays = function(nums1, nums2) {
   if (nums1.length > nums2.length) {
       [nums1, nums2] = [nums2, nums1];
   }
+  
   const len1 = nums1.length;
   const len2 = nums2.length;
   let left = 0;
   let right = len1;
-
+  
+  // applying partitioning technique to minimize timeComplexity
   while (left <= right) {
       const partition1 = Math.floor((left + right) / 2);
       const partition2 = Math.floor((len1 + len2 + 1) / 2) - partition1;
@@ -35,6 +37,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
   }    
 };
 
+// testing code
 const nums1 = [1,2];
 const nums2 = [3,4];
 console.log(findMedianSortedArrays(nums1,nums2));

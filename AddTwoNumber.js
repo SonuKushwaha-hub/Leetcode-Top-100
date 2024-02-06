@@ -1,4 +1,5 @@
 var addTwoNumbers = function(l1, l2) {
+  // adding function to accept carry as parameter
   const func = (l1, l2, carry) => {
       if(!l1 && !l2 && !carry) return null;
       const sum = (l1?.val || 0) + (l2?.val || 0) + carry;
@@ -17,7 +18,7 @@ class ListNode {
   }
 }
 
-// testing code on a testCase-1
+// testing code
 const l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
 const l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
 console.log(addTwoNumbers(l1,l2));

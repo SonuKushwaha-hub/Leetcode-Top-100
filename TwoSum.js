@@ -1,6 +1,5 @@
-// timeComplexity = O(n)
-// spaceComplexity = O(n)
 var twoSum = function(nums, target) {
+  //using map datastructure to keep timeCoplexity and spaceComplexity to O(n)
   const mp = new Map();
   for(let i=0;i<nums.length;i++){
       const diff = target - nums[i];
@@ -10,7 +9,7 @@ var twoSum = function(nums, target) {
   }
 };
 
-// testing code on a testCase-1
+//testing code
 const nums = [2,7,11,15];
 const target = 9;
 console.log(twoSum(nums,target));
