@@ -11,14 +11,14 @@ var romanToInt = function (s) {
 
   let ans = 0, val = 0, pval = Number.MAX_VALUE;
   for (let i = 0; i < s.length; i++) {
-      val = mp.get(s[i]);
-      // if new value is less than previous-value, add to answer
-      if (val <= pval) ans += val;
-      // if new value is greater than previosu-value,
-      // the previous-value is subtracted from new value before adding
-      // and the previous-value is subtracted again to equalize its addition in previous iteration
-      else ans += (val - pval - pval);
-      pval = val;
+    val = mp.get(s[i]);
+    // if new value is less than previous-value, add to answer
+    if (val <= pval) ans += val;
+    // if new value is greater than previosu-value,
+    // the previous-value is subtracted from new value before adding
+    // and the previous-value is subtracted again to equalize its addition in previous iteration
+    else ans += (val - pval - pval);
+    pval = val;
   }
   return ans;
 };
