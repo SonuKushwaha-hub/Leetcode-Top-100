@@ -11,5 +11,5 @@ var intToRoman = function (num) {
 };
 
 // test code
-const num =1994;
+const num = 1994;
 console.log(intToRoman(num));
